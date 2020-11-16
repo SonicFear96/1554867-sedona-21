@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Богдан Рудаков](https://up.htmlacademy.ru/adaptive/21/user/1554867).
-* Наставник: `Неизвестно`.
+* Наставник: [Владимир Борисенко](https://htmlacademy.ru/profile/id1310789).
 
 ---
 
