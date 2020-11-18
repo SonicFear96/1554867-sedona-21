@@ -44,29 +44,43 @@
         SEDONA
       </section>
       <section class="page-main__feedback">
-        <h3 class="page-main__feedback-title">
-          Оставьте свой отзыв
-        </h3>
-        <p class="page-main__feedback-subtitle">
-          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
-        </p>
+        <div class="feedback">
+          <h3 class="page-main__feedback-title">
+            Оставьте свой отзыв
+          </h3>
+          <p class="page-main__feedback-subtitle">
+            Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          </p>
+        </div>
       </section>
       <section class="page-main__filters">
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <form class="filters" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Представьтесь:</legend>
-            <div class="filters__full-name">
-              <p class="filters__name-user">
-                <label>Имя*</label>
-                <input class="name-user" id="name-user" type="text"  name="name" placeholder="Петр">
+            <div class="filters__name">
+              <p class="name">
+                <label class="name__user-wrapper">
+                  <span>
+                    Имя*
+                  </span>
+                  <input class="name__user" type="text"  name="name" placeholder="Петр">
+                </label>
               </p>
-              <p class="filters__surname-user">
-                <label>Фамилия*</label>
-                <input class="surname-user" id="surname-user" type="text" name="text" placeholder="Иванов">
+              <p class="name">
+                <label class="name__user-wrapper">
+                  <span>
+                    Фамилия*
+                  </span>
+                  <input class="name__user" type="text" name="text" placeholder="Иванов">
+                </label>
               </p>
-              <p class="filters__patronymic-user">
-                <label>Отчество</label>
-                <input class="patronymic-user" id="patronymic-user" type="text" name="text" placeholder="Александрович">
+              <p class="name">
+                <label class="name__user-wrapper">
+                  <span>
+                    Отчество
+                  </span>
+                  <input class="name__user" type="text" name="text" placeholder="Александрович">
+                </label>
               </p>
             </div>
           </fieldset>
@@ -104,19 +118,19 @@
             <legend>Посещенные достопримечательности:</legend>
             <ul>
               <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="devils-bridge" id="filter-devils-bridge" checked>
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="devils-bridge" id="filter-devils-bridge" checked>
                 <label for="filter-devils-bridge">Мост Дьявола</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="mountain-bell" id="mountain-bell" checked>
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="mountain-bell" id="mountain-bell" checked>
                 <label for="filter-mountain-bell">Гора Колокол</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="slide-park" id="filter-slide-park" checked>
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="slide-park" id="filter-slide-park" checked>
                 <label for="filter-slide-park">Слайд-парк</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="red-rocks" id="filter-red-rocks">
+                <input class="filter-input-checkbox filter-input" type="checkbox" name="red-rocks" id="filter-red-rocks">
                 <label for="filter-red-rocks">Красные скалы</label>
               </li>
             </ul>
@@ -138,7 +152,7 @@
         <div class="page-footer__logo">
           <h2>#visitsedona</h2>
         </div>
-        <div class="page-footer__social">
+        <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://vk.com/htmlacademy"> Мы в твиттере
@@ -154,7 +168,7 @@
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright">
+        <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"> HTML Academy
           </a>
