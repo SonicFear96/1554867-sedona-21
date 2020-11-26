@@ -1,0 +1,19 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+.page-header__logo {
+  height: 80px;
+  order: 2;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+    height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+    height: 80px;
+  }
+}
