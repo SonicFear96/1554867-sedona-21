@@ -1,3 +1,21 @@
+.filters__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+    grid-template-areas:
+      "impression introduce"
+      "contact contact"
+      "attractions attractions"
+      "emotion emotion"
+      "footer footer";
+  }
+}
+
 .filters__fieldset {
   border: none;
   border-top: 1px solid @border-grey;
@@ -13,4 +31,54 @@
   color: @basic-white;
   text-decoration: none;
   border: none;
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto;
+  }
+}
+
+.filters__fieldset:nth-child(1) {
+  grid-area: introduce;
+  width: 100%;
+  display: inline-block;
+}
+
+.filters__fieldset:nth-child(2) {
+  grid-area: contact;
+  width: 100%;
+  display: inline-block;
+}
+
+.filters__fieldset:nth-child(3) {
+  grid-area: impression;
+  width: 100%;
+  display: inline-block;
+}
+
+.filters__fieldset:nth-child(4) {
+  grid-area: attractions;
+  width: 100%;
+  display: inline-block;
+}
+
+.filters__fieldset:nth-child(5) {
+  grid-area: emotion;
+  width: 100%;
+  height: inline-block;
+}
+
+.filters__footer {
+  grid-area: footer;
+  margin: auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters__legend {
+  font-size: 14px;
+  color: @light-black;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
