@@ -1,5 +1,18 @@
 .advantages__list {
+  display: block;
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.advantages__item {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
 }

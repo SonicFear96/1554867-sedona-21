@@ -1,5 +1,9 @@
 .page-footer__wrapper {
-  text-align: center;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__title {
