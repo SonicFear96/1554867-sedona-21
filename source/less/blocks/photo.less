@@ -1,4 +1,25 @@
 .photo__list {
   list-style: none;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.photo__item {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 33%;
+  }
+}
+
+.photo__item--main {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
