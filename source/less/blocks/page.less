@@ -3,9 +3,18 @@
   font-size: 21px;
   font-family: "PT Sans", "Arial", sans-serif;
   line-height: 26px;
+  background-color: @light-grey;
 }
 
 .page__body {
   background-color: @basic-white;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width:@desktop-width) {
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: @basic-white;
+   }
 }
