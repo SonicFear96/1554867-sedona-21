@@ -2,6 +2,10 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width){
+    font-size: 21px;
+  }
 }
 
 .advantage__number,
@@ -15,6 +19,11 @@
     position: relative;
     text-align: inherit;
     padding: 25px 0 26px 18%;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 330px;
+    padding: 60px 35px 80px 35px;
   }
 }
 
@@ -34,13 +43,23 @@
 }
 
 .advantage--sub-item {
+  padding: 20px 35px 24px 35px;
   text-align: center;
   background-color: @basic-grey;
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 36px 43px 62px
+  }
 }
 
 .advantage--main-item {
+  padding: 35px 5px 30px 5px;
   @media (min-width: @tablet-width) {
     width: 33%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 58px 60px 60px;
   }
 }
 
@@ -52,7 +71,7 @@
 
 .advantage__image {
   @media (min-width: @tablet-width) {
-    width: 66%;
+    width: 67%;
   }
 }
 

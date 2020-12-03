@@ -1,13 +1,13 @@
 .search__wrapper {
   text-align: center;
-  padding: 33px 28px 49px 28px;
+  padding: 22px 19px 49px 19px;
 
   @media (min-width: @tablet-width) {
     padding: 58px 166px 58px 166px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 58px 382px 66px 382px;
+    padding: 23px 370px 66px 370px;
   }
 }
 
@@ -28,12 +28,19 @@
 
 .search__button {
   display: inline-block;
+  box-sizing: border-box;
+  margin-top: 27px;
   padding: 16px 28px 16px 28px;
-  width: 95%;
+  width: 280px;
   font-weight: bold;
-  background-color: @basic-blue;
-  color: @basic-white;
+  background-color: #81B3D2;
+  color: #ffffff;
   text-decoration: none;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 31px;
+      width: 458px;
+    }
 
   &:hover {
     background-color: @blue-button-hover;
