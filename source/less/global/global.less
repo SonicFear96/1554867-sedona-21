@@ -16,6 +16,16 @@ img {
   overflow: hidden;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .skip {
   @media (max-width: @mobile-width-only) {
     display: none;

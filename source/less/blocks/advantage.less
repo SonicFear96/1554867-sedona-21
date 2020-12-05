@@ -18,13 +18,17 @@
   @media (max-width: @mobile-width-only) {
     position: relative;
     text-align: inherit;
-    height: 140px;
-    padding: 18px 0 4px 21%;
+    height: 137px;
+    padding: 4px 0 10px 22%;
   }
 
   @media (min-width: @tablet-width) {
     height: 330px;
-    padding: 60px 35px 80px 35px;
+    padding: 60px 34px 80px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 50px 80px 50px;
   }
 }
 
@@ -45,19 +49,24 @@
 
 .advantage--sub-item {
   text-align: center;
-  padding: 9px 35px 5px 35px;
+  padding: 7px 35px 5px 35px;
   background-color: @basic-grey;
 
+  @media (min-width: @tablet-width) {
+    padding: 20px 39px 10px 39px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding: 20px 36px 43px 62px;
+    padding: 18px 58px 43px 58px;
   }
 }
 
 .advantage--main-item {
-  padding: 23px 5px 30px 5px;
+  padding: 25px 10px 22px 9px;
 
   @media (min-width: @tablet-width) {
     width: 33%;
+    padding: 20px 29px 30px 29px;
   }
 
   @media (min-width: @desktop-width) {
