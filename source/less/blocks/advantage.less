@@ -6,24 +6,32 @@
   @media (min-width: @tablet-width) {
     font-size: 21px;
   }
+
+  &--icon {
+    margin: 0;
+    margin-top: 22px;
+  }
 }
 
 .advantage__number,
 .advantage__description {
   font-size: 14px;
   line-height: 21px;
+
+  &--icon {
+    margin: 0;
+    margin-top: 18px;
+  }
 }
 
 .advantage--icon {
   @media (max-width: @mobile-width-only) {
     position: relative;
     text-align: inherit;
-    height: 137px;
-    padding: 4px 0 10px 22%;
   }
 
   @media (min-width: @tablet-width) {
-    height: 330px;
+    min-height: 330px;
     padding: 60px 34px 80px 34px;
   }
 
@@ -41,15 +49,17 @@
 .advantage__svg {
   @media (max-width: @mobile-width-only) {
     position: absolute;
-    left: 20px;
-    top: 30px;
-    width: 10%;
+    left: -50px;
+    top: -8px;
+    height: 39px;
+    width: 37px;
   }
 }
 
 .advantage--sub-item {
+  min-height: 167px;
+  padding: 15px 35px 0 35px;
   text-align: center;
-  padding: 7px 35px 5px 35px;
   background-color: @basic-grey;
 
   @media (min-width: @tablet-width) {
@@ -62,7 +72,7 @@
 }
 
 .advantage--main-item {
-  padding: 25px 10px 22px 9px;
+  padding: 30px 10px 22px 9px;
 
   @media (min-width: @tablet-width) {
     width: 33%;
@@ -70,7 +80,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 25px 58px 60px 60px;
+    padding: 23px 58px 45px 60px;
   }
 }
 
@@ -86,7 +96,7 @@
   }
 }
 
-.image--last {
+.advantage__image--last {
   @media (min-width: @tablet-width) {
     order: -1;
   }

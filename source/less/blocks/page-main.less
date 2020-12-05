@@ -1,9 +1,9 @@
 .page-main__greet {
   text-align: center;
-  padding: 15px 28px 25px 28px;
+  padding: 14px 28px 22px 28px;
 
   @media (min-width: @tablet-width) {
-    height: 206px;
+    min-height: 206px;
     padding: 20px 124px 52px;
   }
 
@@ -29,9 +29,9 @@
 
 .page-main__greeting {
   height: 389px;
-  background-image: url("../img/back-desktop.png");
+  background-image: url("../img/triangle-desktop.svg"), url("../img/back-desktop.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 50% bottom;
 
   @media (min-width: @tablet-width) {
     height: 520px;
@@ -43,7 +43,9 @@
   margin: 0 auto;
   padding: 77px 0 93px 0;
 }
+
 /*PAGE FORM*/
+
 .page-main__title {
   background-image: url("../img/back-desktop-2.png");
   background-repeat: no-repeat;
