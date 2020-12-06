@@ -1,26 +1,118 @@
-.advantage--main-item {
-  text-align: center;
-  background-color: @basic-blue;
-  color: @basic-white;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-  }
-}
-
 .advantage__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  &--icon {
+    margin: 0;
+    margin-top: 22px;
+  }
 }
 
 .advantage__number,
 .advantage__description {
   font-size: 14px;
   line-height: 21px;
+
+  &--icon {
+    margin: 0;
+    margin-top: 18px;
+  }
+}
+
+.advantage--icon {
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    text-align: inherit;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 330px;
+    padding: 135px 34px 58px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 133px 50px 80px 50px;
+  }
+}
+
+.advantage--icon:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.advantage__svg {
+  position: absolute;
+
+  @media (max-width: @mobile-width-only) {
+    top: -8px;
+    left: -50px;
+    width: 37px;
+    height: 39px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    transform: translateX(-50%);
+    width: 74px;
+    height: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 57px;
+    width: 74px;
+    height: 71px;
+  }
 }
 
 .advantage--sub-item {
+  min-height: 167px;
+  padding: 15px 35px 0 35px;
   text-align: center;
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 39px 30px 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 58px 43px 58px;
+  }
+}
+
+.advantage--main-item {
+  padding: 30px 10px 22px 9px;
+
+  @media (min-width: @tablet-width) {
+    width: 33%;
+    padding: 20px 29px 30px 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 23px 58px 45px 60px;
+  }
+}
+
+.advantage--main-item:last-child {
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.advantage__image {
+  @media (min-width: @tablet-width) {
+    width: 67%;
+  }
+}
+
+.advantage__image--last {
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }

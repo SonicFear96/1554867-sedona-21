@@ -1,4 +1,18 @@
 .copyright__text {
+  margin-left: -8px;
+  padding-top: 0;
+  padding-right: 0;
   font-weight: normal;
   font-size: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+    padding-right: 5px;
+  }
+}
+
+.copyright__svg {
+  @media (max-width: @mobile-width-only) {
+    margin-top: -2px;
+  }
 }
