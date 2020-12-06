@@ -1,9 +1,36 @@
 .social__list {
   display: flex;
+  margin-top: 35px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 3px;
+    margin-top: -2px;
+  }
 }
 
 .social__item {
-  display: inline;
+  margin-right: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 6px;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  background-color: @basic-blue;
+
+  &:hover {
+    background-color: @blue-button-hover;
+  }
+
+  &:active {
+    background-color: @blue-button-active;
+  }
 }
