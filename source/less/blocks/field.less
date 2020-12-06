@@ -1,20 +1,54 @@
 .field__label {
+  padding: 17px 13px 10px 0;
   font-size: 14px;
 
   &--bold {
     font-weight: bold;
     font-size: 18px;
     text-transform: none;
+    padding: 10px;
   }
 }
 
 .field__input {
+  box-sizing: border-box;
   font-weight: bold;
   font-size: 18px;
   font-family: "PT Sans", "Arial", sans-serif;
   background-color: @light-grey;
+  border: none;
+  height: 58px;
+  width: 100%;
 
   &::placeholder {
     color: @basic-black;
+  }
+}
+
+.field__init {
+  &:checked ~ .field__radio::before {
+    opacity: 1;
+  }
+}
+
+.field__radio {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: @light-grey;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: @basic-black;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
   }
 }
