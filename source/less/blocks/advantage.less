@@ -25,18 +25,19 @@
 }
 
 .advantage--icon {
+  position: relative;
+
   @media (max-width: @mobile-width-only) {
-    position: relative;
     text-align: inherit;
   }
 
   @media (min-width: @tablet-width) {
     min-height: 330px;
-    padding: 60px 34px 58px 34px;
+    padding: 135px 34px 58px 34px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 50px 80px 50px;
+    padding: 133px 50px 80px 50px;
   }
 }
 
@@ -47,12 +48,27 @@
 }
 
 .advantage__svg {
+  position: absolute;
+
   @media (max-width: @mobile-width-only) {
-    position: absolute;
-    left: -50px;
     top: -8px;
-    height: 39px;
+    left: -50px;
     width: 37px;
+    height: 39px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 91px;
+    width: 74px;
+    height: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 57px;
+    left: 162px;
+    width: 74px;
+    height: 71px;
   }
 }
 
