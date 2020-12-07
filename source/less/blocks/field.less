@@ -1,27 +1,63 @@
+.field {
+  display: flex;
+  margin-top: 13px;
+  margin-bottom: 7px;
+
+  &--vertical {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &--textarea {
+    margin-top: 8px;
+    height: 160px;
+  }
+}
+
 .field__label {
-  padding: 17px 13px 10px 0;
+  padding: 17px 14px 9px 2px;
   font-size: 14px;
 
   &--bold {
+    padding: 17px 18px 6px 32px;
     font-weight: bold;
     font-size: 18px;
     text-transform: none;
-    padding: 10px;
+  }
+
+  &--vertical {
+    padding: 11px 14px 9px 24px;
+  }
+
+  &--squad {
+    padding: 16px 12px 18px 34px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: none;
   }
 }
 
 .field__input {
-  box-sizing: border-box;
+  height: 58px;
+  width: 100%;
+  padding-left: 23px;
   font-weight: bold;
   font-size: 18px;
   font-family: "PT Sans", "Arial", sans-serif;
   background-color: @light-grey;
   border: none;
-  height: 58px;
-  width: 100%;
 
   &::placeholder {
     color: @basic-black;
+  }
+
+  &--textarea {
+    height: 160px;
+    padding-top: 12px;
+    padding-left: 22px;
+    line-height: 26px;
+}
   }
 }
 

@@ -47,7 +47,23 @@
 /*PAGE FORM*/
 
 .page-main__title {
-  background-image: url("../img/back-desktop-2.png");
+  background-image: url("../img/triangle-desktop.svg"), url("../img/back-desktop-2.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 50% bottom;
+
+  @media (max-width: @mobile-width-only) {
+    min-height: 158px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+  }
+}
+
+.page-main__filters {
+  margin-top: 26px;
 }

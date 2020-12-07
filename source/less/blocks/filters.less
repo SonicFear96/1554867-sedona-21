@@ -1,8 +1,14 @@
 .filters__wrapper {
+  margin: 0 auto;
+
+  @media (max-width: @mobile-width-only){
+
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0;
     grid-template-areas:
       "impression introduce"
@@ -10,27 +16,49 @@
       "attractions attractions"
       "emotion emotion"
       "footer footer";
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width){
+    width: 960px;
   }
 }
 
 .filters__fieldset {
   border: none;
-  border-top: 1px solid @border-grey;
 }
 
 .filters__button {
-  padding: 14px 35.5px 17px 35.5px;
+  padding: 18px 39px 14px 38px;
+  width: 280px;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  background-color: @basic-blue;
-  color: @basic-white;
+  background-color: #81B3D2;
+  color: #ffffff;
   text-decoration: none;
   border: none;
 
+  &:hover {
+    background-color: @blue-button-hover;
+  }
+
+  &:active {
+    background-color: @blue-button-active;
+    color: @text-active;
+  }
+
   @media (max-width: @mobile-width-only) {
     margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
   }
 }
 
@@ -40,25 +68,31 @@
 
 .filters__fieldset:nth-child(2) {
   grid-area: contact;
+  margin-top: 25px;
 }
 
 .filters__fieldset:nth-child(3) {
   grid-area: impression;
+  margin-top: 32px;
 }
 
 .filters__fieldset:nth-child(4) {
+  margin-top: 31px;
   grid-area: attractions;
 }
 
 .filters__fieldset:nth-child(5) {
   grid-area: emotion;
+  margin-top: 22px;
 }
 
 .filters__footer {
   grid-area: footer;
-  margin: auto 0;
   display: flex;
   justify-content: space-between;
+  margin: auto 0;
+  margin-top: 31px;
+  margin-bottom: 41px;
 }
 
 .filters__legend {
