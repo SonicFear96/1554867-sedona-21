@@ -62,7 +62,7 @@
         <form class="filters" method="get" action="https://echo.htmlacademy.ru">
           <div class="filters__wrapper">
             <fieldset class="filters__fieldset fieldset">
-              <legend class="fieldset__legend">Представьтесь:</legend>
+              <legend class="fieldset__legend fieldset__legend--column">Представьтесь:</legend>
               <div class="fieldset__content">
                 <label class="field fieldset__item">
                   <span class="field__label">Имя*:</span>
@@ -82,63 +82,63 @@
               <legend class="fieldset__legend">Контактная информация:</legend>
               <div class="fieldset__content">
                 <label class="field field--vertical fieldset__item">
-                  <span class="field__label field__label--vertical"> <span>Контактный</span> Телефон*:</span>
-                  <input class="field__input"  type="phone" name="phone" placeholder="Введите телефон">
+                  <span class="field__label field__label--vertical"> <span class="skip--form">Контактный</span> Телефон*:</span>
+                  <input class="field__input field__input--contact"  type="phone" name="phone" placeholder="Введите телефон">
                 </label>
                 <label class="field field--vertical fieldset__item">
                   <span class="field__label field__label--vertical">Электронная&nbsp;почта*:</span>
-                  <input class="field__input" type="email" name="mail" placeholder="Введите e-mail">
+                  <input class="field__input field__input--contact" type="email" name="mail" placeholder="Введите e-mail">
                 </label>
               </div>
             </fieldset>
             <fieldset class="filters__fieldset fieldset">
-              <legend class="fieldset__legend">Ваше общее впечатление:</legend>
+              <legend class="fieldset__legend fieldset__legend--column">Ваше общее впечатление:</legend>
               <div class="fieldset__content">
                 <label class="field fieldset__item">
-                  <input class="visually-hidden" type="radio" name="filters_impression" value="good" checked>
+                  <input class="visually-hidden field__init" type="radio" name="filters_impression" value="good" checked>
                   <span class="field__radio"></span>
                   <span class="field__label field__label--bold">Скорее положительное</span>
                 </label>
                 <label class="field fieldset__item">
-                  <input class="visually-hidden" type="radio" name="filters_impression" value="bad">
+                  <input class="visually-hidden field__init" type="radio" name="filters_impression" value="bad">
                   <span class="field__radio"></span>
                   <span class="field__label field__label--bold">Скорее отрицательное</span>
                 </label>
                 <label class="field fieldset__item">
-                  <input class="visually-hidden" type="radio" name="filters_impression" value="no-answer">
+                  <input class="visually-hidden field__init" type="radio" name="filters_impression" value="no-answer">
                   <span class="field__radio"></span>
                   <span class="field__label field__label--bold">Затрудняюсь ответить</span>
                 </label>
               </div>
             </fieldset>
             <fieldset class="filters__fieldset fieldset">
-              <legend class="fieldset__legend">Посещенные достопримечательности:</legend>
-              <div class="fieldset__content">
+              <legend class="fieldset__legend">Посещенные <br> достопримечательности:</legend>
+              <div class="fieldset__content fieldset__content--horizont">
                 <label class="field fieldset__item">
                   <input class="visually-hidden" type="checkbox" name="most_dyavola" checked>
-                  <span class="field__radio"></span>
+                  <span class="field__radio field__radio--squad"></span>
                   <span class="field__label field__label--squad">Мост Дьявола</span>
                 </label>
                 <label class="field fieldset__item">
                   <input class="visually-hidden" type="checkbox" name="gora_kolokol" checked>
-                  <span class="field__radio"></span>
+                  <span class="field__radio field__radio--squad"></span>
                   <span class="field__label field__label--squad">Гора Колокол</span>
                 </label>
                 <label class="field fieldset__item">
                   <input class="visually-hidden" type="checkbox" name="slide_park" checked>
-                  <span class="field__radio"></span>
+                  <span class="field__radio field__radio--squad"></span>
                   <span class="field__label field__label--squad">Слайд-парк</span>
                 </label>
                 <label class="field fieldset__item">
                   <input class="visually-hidden" type="checkbox" name="krasny_skaly">
-                  <span class="field__radio"></span>
+                  <span class="field__radio field__radio--squad"></span>
                   <span class="field__label field__label--squad">Красные скалы</span>
                 </label>
               </div>
             </fieldset>
             <fieldset class="filters__fieldset fieldset">
               <legend class="fieldset__legend">Опишите свои эмоции:</legend>
-                <label class="field fieldset__item">
+                <label class="field fieldset__item field--textarea">
                   <textarea class="field__input field__input--textarea" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
                 </label>
             </fieldset>

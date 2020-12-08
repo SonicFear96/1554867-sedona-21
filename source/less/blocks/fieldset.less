@@ -1,3 +1,10 @@
+.fieldset {
+  @media (min-width: @tablet-width){
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .fieldset__legend {
   font-weight: bold;
   font-size: 18px;
@@ -5,10 +12,44 @@
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
+    padding: 0;
+  }
+
+  &--column {
+    @media (min-width: @tablet-width) {
+      padding-right: 52px;
+    }
   }
 }
 
 .fieldset__content {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 43px;
+  }
+
+  &--horizont {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row;
+      margin-top: 32px;
+    }
+  }
+}
+
+.fieldset--contact .fieldset__content {
+  margin-top: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 65px;
+  }
+}
+
+.fieldset__content--horizont .fieldset__item:last-child .field__label--squad {
+  padding-right: 0;
 }
