@@ -1,10 +1,6 @@
 .filters__wrapper {
   margin: 0 auto;
 
-  @media (max-width: @mobile-width-only){
-
-  }
-
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,7 +15,7 @@
     width: 648px;
   }
 
-  @media (min-width: @desktop-width){
+  @media (min-width: @desktop-width) {
     width: 960px;
   }
 }
@@ -35,8 +31,8 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  background-color: #81B3D2;
-  color: #ffffff;
+  background-color: @basic-blue;
+  color: @basic-white;
   text-decoration: none;
   border: none;
 
@@ -91,10 +87,15 @@
 }
 
 .filters__fieldset:nth-child(4) {
-  margin-top: 31px;
   grid-area: attractions;
+  margin-top: 31px;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin-top: 46px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-top: 46px;
   }
 }

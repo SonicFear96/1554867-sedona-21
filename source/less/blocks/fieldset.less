@@ -1,5 +1,5 @@
 .fieldset {
-  @media (min-width: @tablet-width){
+  @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
   }
@@ -31,6 +31,12 @@
   }
 
   &--horizont {
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
     @media (min-width: @desktop-width) {
       display: flex;
       flex-direction: row;
@@ -52,4 +58,26 @@
 
 .fieldset__content--horizont .fieldset__item:last-child .field__label--squad {
   padding-right: 0;
+}
+
+.fieldset__item {
+  &--circle {
+    @media (max-width: @mobile-width-only) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--squad {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      width: 50%;
+      margin-bottom: 15px;
+      padding-left: 93px;
+    }
+  }
+
+  &--squad:nth-child(2n) {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      padding-left: 29px;
+    }
+  }
 }

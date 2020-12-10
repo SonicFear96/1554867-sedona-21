@@ -4,11 +4,14 @@
   margin-bottom: 7px;
 
   &--vertical {
+    position: relative;
     flex-direction: column;
-    margin-top: 7px;
-    margin-bottom: 4px;
+    margin: 0;
+
 
     @media (min-width: @desktop-width) {
+      margin-top: 7px;
+      margin-bottom: 4px;
       flex-direction: row;
       justify-content: flex-start;
     }
@@ -24,22 +27,42 @@
   }
 }
 
+.field--vertical::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: @form-grey;
+  background-image: url("../img/phone.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  width: 58px;
+  height: 58px;
+  opacity: 1;
+  top: 0;
+  right: 1px;
+}
+
+.field--mail::after {
+  background-image: url("../img/mail.svg");
+}
+
 .field__label {
-  padding: 18px 14px 10px 58px;
+  padding: 18px 14px 10px 2px;
   font-size: 14px;
 
   &--bold {
-    padding: 17px 18px 6px 32px;
+    padding: 17px 18px 6px 23px;
     font-weight: bold;
     font-size: 18px;
     text-transform: none;
 
     @media (min-width: @tablet-width) {
-      padding: 17px 16px 15px 27px;
+      padding: 17px 16px 15px 19px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 17px 16px 15px 30px;
+      padding: 17px 16px 15px 22px;
     }
   }
 
@@ -51,18 +74,22 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 18px 15px 9px 0px
+      padding: 18px 15px 9px 0;
     }
   }
 
   &--squad {
-    padding: 16px 12px 18px 34px;
+    padding: 16px 12px 18px 25px;
     font-weight: bold;
     font-size: 18px;
     text-transform: none;
 
+    @media (min-width: @tablet-width) {
+      padding: 16px 12px 18px 26px;
+    }
+
     @media (min-width: @desktop-width) {
-     padding: 16px 69px 18px 25px;
+      padding: 16px 69px 18px 25px;
     }
   }
 }
@@ -93,11 +120,14 @@
   }
 
   &--contact {
+    position: relative;
+
     @media (min-width: @desktop-width) {
       width: 316px;
     }
   }
 }
+
 
 .field__init {
   &:checked ~ .field__radio::before {
@@ -108,22 +138,28 @@
 .field__radio {
   position: relative;
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
+  left: 4px;
+  top: 1px;
   background-color: @light-grey;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 1px;
+  }
 
   &::before {
     position: absolute;
     content: "";
     display: block;
     background-color: @basic-black;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     opacity: 0;
     border-radius: 50%;
-    top: 15px;
-    left: 15px;
+    top: 19px;
+    left: 18px;
   }
 
   &--squad {
@@ -131,4 +167,18 @@
     width: 56px;
     height: 56px;
   }
+}
+
+
+.field__radio--squad::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: transparent;
+  background-image: url("../img/tick.svg");
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  top: 19px;
+  left: 18px;
 }
