@@ -1,54 +1,5 @@
 .field {
   display: flex;
-  margin-top: 13px;
-  margin-bottom: 7px;
-
-  &--vertical {
-    position: relative;
-    flex-direction: column;
-    margin: 0;
-
-
-    @media (min-width: @desktop-width) {
-      margin-top: 7px;
-      margin-bottom: 4px;
-      flex-direction: row;
-      justify-content: flex-start;
-    }
-  }
-
-  &--textarea {
-    margin-top: 8px;
-    height: 160px;
-
-    @media (min-width: @tablet-width) {
-      margin-top: 55px;
-    }
-  }
-
-  &--vertical::after {
-    position: absolute;
-    content: "";
-    display: block;
-    background-color: @form-grey;
-    background-image: url("../img/phone.svg");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    width: 58px;
-    height: 58px;
-    opacity: 1;
-    top: 47px;
-    right: 1px;
-
-    @media (min-width: @desktop-width) {
-      top: 0;
-    }
-  }
-
-  &--mail::after {
-    background-image: url("../img/mail.svg");
-  }
 }
 
 .field__label {
@@ -93,7 +44,13 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 16px 69px 18px 25px;
+      padding: 16px 68px 18px 26px;
+    }
+  }
+
+  &--last {
+    @media (min-width: @desktop-width) {
+      padding-right: 0;
     }
   }
 }
@@ -117,7 +74,7 @@
     padding-top: 12px;
     padding-left: 22px;
     line-height: 26px;
-    resize: vertical;
+    resize: none;
 
     @media (min-width: @tablet-width) {
       padding-top: 17px;

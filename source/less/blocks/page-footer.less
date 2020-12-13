@@ -1,10 +1,13 @@
 .page-footer__wrapper {
-  margin-left: 90px;
-  margin-right: 87px;
-  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 25px 0;
+  }
 
   @media (min-width: @tablet-width) {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 60px;
@@ -14,7 +17,7 @@
   @media (min-width: @desktop-width) {
     margin-left: 120px;
     margin-right: 120px;
-    padding-top: 30px;
+    padding-top: 7px;
   }
 }
 
@@ -23,12 +26,16 @@
   margin-top: 10px;
   font-weight: bold;
   font-size: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .page-footer__copyright {
   display: flex;
-  margin-top: 45px;
-  padding-left: 15px;
+  margin-top: 24px;
+  padding-left: 13px;
 
   @media (min-width: @tablet-width) {
     margin-top: 1px;

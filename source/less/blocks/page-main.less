@@ -67,3 +67,19 @@
 .page-main__filters {
   margin-top: 26px;
 }
+
+.page-main__feedback {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      background-color: @border-grey;
+      width: 100%;
+      height: 1px;
+      bottom: -6px;
+    }
+  }
+}
