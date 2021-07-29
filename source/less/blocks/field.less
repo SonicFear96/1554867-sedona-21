@@ -1,20 +1,145 @@
+.field {
+  display: flex;
+}
+
 .field__label {
+  padding: 18px 14px 10px 2px;
   font-size: 14px;
 
   &--bold {
+    padding: 17px 18px 6px 23px;
     font-weight: bold;
     font-size: 18px;
     text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      padding: 17px 16px 15px 19px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 17px 16px 15px 22px;
+    }
+  }
+
+  &--vertical {
+    padding: 11px 14px 9px 24px;
+
+    @media (min-width: @tablet-width) {
+      padding: 22px 16px 9px 22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 18px 15px 9px 0;
+    }
+  }
+
+  &--squad {
+    padding: 16px 12px 18px 25px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: none;
+
+    @media (min-width: @tablet-width) {
+      padding: 16px 12px 18px 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 16px 68px 18px 26px;
+    }
+  }
+
+  &--last {
+    @media (min-width: @desktop-width) {
+      padding-right: 0;
+    }
   }
 }
 
 .field__input {
+  height: 58px;
+  width: 100%;
+  padding-left: 23px;
   font-weight: bold;
   font-size: 18px;
   font-family: "PT Sans", "Arial", sans-serif;
   background-color: @light-grey;
+  border: none;
 
   &::placeholder {
     color: @basic-black;
+  }
+
+  &--textarea {
+    height: 160px;
+    padding-top: 12px;
+    padding-left: 22px;
+    line-height: 26px;
+    resize: none;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 17px;
+    }
+  }
+
+  &--contact {
+    position: relative;
+
+    @media (min-width: @desktop-width) {
+      width: 316px;
+    }
+  }
+}
+
+
+.field__init {
+  &:checked ~ .field__radio::before {
+    opacity: 1;
+  }
+}
+
+.field__radio {
+  position: relative;
+  display: block;
+  width: 56px;
+  height: 56px;
+  left: 4px;
+  top: 1px;
+  background-color: @light-grey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 1px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: @basic-black;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    border-radius: 50%;
+    top: 19px;
+    left: 18px;
+  }
+
+  &--squad {
+    border-radius: 0%;
+    width: 56px;
+    height: 56px;
+  }
+
+  &--squad::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: transparent;
+    background-image: url("../img/tick.svg");
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    top: 19px;
+    left: 18px;
   }
 }

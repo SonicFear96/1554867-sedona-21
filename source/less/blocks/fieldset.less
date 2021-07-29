@@ -1,5 +1,229 @@
+.fieldset {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .fieldset__legend {
   font-weight: bold;
   font-size: 18px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 21px;
+  }
+
+  &--column {
+    @media (min-width: @tablet-width) {
+      padding-right: 52px;
+    }
+  }
+
+  &--center {
+    @media (min-width: @tablet-width) {
+      position: relative;
+    }
+  }
+
+  &--center::before {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      display: block;
+      background-color: @border-grey;
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+      width: 123px;
+      height: 1px;
+      opacity: 1;
+      bottom: 14px;
+      right: 340px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      content: "";
+      display: block;
+      background-color: @border-grey;
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+      width: 280px;
+      height: 1px;
+      opacity: 1;
+      bottom: 16px;
+      right: 325px;
+    }
+  }
+
+  &--center::after {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      display: block;
+      background-color: @border-grey;
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+      width: 123px;
+      height: 1px;
+      opacity: 1;
+      bottom: 14px;
+      left: 340px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 280px;
+      bottom: 16px;
+      left: 324px;
+    }
+  }
+
+
+  &--center-squad {
+    position: relative;
+  }
+
+  &--center-squad::before {
+    @media (min-width: @tablet-width) {
+      bottom: 25px;
+      right: 338px;
+    }
+  }
+
+  &--center-squad::after {
+    @media (min-width: @tablet-width) {
+      bottom: 25px;
+      left: 338px;
+    }
+  }
+
+  &--center-textarea {
+    position: relative;
+  }
+
+  &--center-textarea::before {
+    @media (min-width: @tablet-width) {
+      bottom: 18px;
+      right: 325px;
+    }
+  }
+
+  &--center-textarea::after {
+    @media (min-width: @tablet-width) {
+      bottom: 18px;
+      left: 325px;
+    }
+  }
+}
+
+.fieldset__content {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 43px;
+  }
+
+  &--horizont {
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row;
+      margin-top: 32px;
+    }
+  }
+}
+
+.fieldset--contact .fieldset__content {
+  margin-top: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 65px;
+  }
+}
+
+.fieldset__item {
+  margin-top: 13px;
+  margin-bottom: 7px;
+
+  &--vertical {
+    position: relative;
+    flex-direction: column;
+    margin: 0;
+
+
+    @media (min-width: @desktop-width) {
+      margin-top: 7px;
+      margin-bottom: 4px;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  &--circle {
+    @media (max-width: @mobile-width-only) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--squad {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      width: 50%;
+      margin-bottom: 15px;
+      padding-left: 93px;
+    }
+  }
+
+  &--squad:nth-child(2n) {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      padding-left: 29px;
+    }
+  }
+
+  &--textarea {
+    margin-top: 8px;
+    height: 160px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 55px;
+    }
+  }
+
+
+  &--vertical::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: @form-grey;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    width: 58px;
+    height: 58px;
+    opacity: 1;
+    top: 46px;
+    right: 1px;
+
+    @media (min-width: @tablet-width) {
+      top: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 0;
+    }
+  }
+
+  &--mail::after {
+    background-image: url("../img/mail.svg");
+  }
 }
