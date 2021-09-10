@@ -1,16 +1,20 @@
 .post__title {
+  margin: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
 }
 
 .post__author {
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
   text-transform: none;
 }
 
 .post__likes {
+  margin: 0;
+  padding: 0 10px 10px 10px;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
@@ -18,4 +22,50 @@
 
 .post__photo {
   margin: 40px 20px 40px 20px;
+  width: 280px;
+  height: 280px;
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 100%;
+    height: 267px;
+  }
+}
+
+.post__wrapper--title {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.post__wrapper--author {
+  padding: 10px 0 10px 20px;
+  @media (max-width: @desktop-width) {
+  }
+}
+
+.post__wrapper--likes {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 0 20px;
+  @media (min-width: @tablet-width) {
+    padding: 18px 10px 0px 10px;
+  }
+}
+
+.post__icon {
+  fill: black;
+  opacity: 0.3;
+  @media (min-width: @desktop-width) {
+    fill: #fff;
+    opacity: 1;
+  }
 }
