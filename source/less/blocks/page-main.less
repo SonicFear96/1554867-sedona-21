@@ -29,12 +29,17 @@
 
 .page-main__greeting {
   height: 389px;
-  background-image: url("../img/triangle-desktop.svg"), url("../img/back-desktop.png");
+  background-image: url("../img/triangle-desktop.svg"),
+    url("../img/back-desktop.png");
   background-repeat: no-repeat;
   background-position: 50% bottom;
 
   @media (min-width: @tablet-width) {
     height: 520px;
+  }
+
+  @media (max-width: 320px) {
+    background-image: url("../img/back-desktop-mobile.png");
   }
 }
 
@@ -47,7 +52,8 @@
 /*PAGE FORM*/
 
 .page-main__title {
-  background-image: url("../img/triangle-desktop.svg"), url("../img/back-desktop-2.png");
+  background-image: url("../img/triangle-desktop.svg"),
+    url("../img/back-desktop-2.png");
   background-repeat: no-repeat;
   background-position: 50% bottom;
 
@@ -83,3 +89,5 @@
     }
   }
 }
+
+/*PAGE CATALOG*/

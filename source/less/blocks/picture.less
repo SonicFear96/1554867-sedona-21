@@ -1,10 +1,37 @@
+.picture {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    padding: 18px 8px 10px 8px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 162px;
+    margin-right: 162px;
+    padding-top: 32px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 382px;
+    margin-right: 382px;
+    padding-top: 81px;
+    padding-bottom: 36px;
+  }
+}
+
 .picture__title {
   font-weight: bold;
   font-size: 18px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .picture__subtitle {
+  margin: 0;
+  margin-top: 28px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;

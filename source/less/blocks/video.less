@@ -1,7 +1,29 @@
-.video__title {
+.video__wrapper {
   text-align: center;
+  padding: 20px 19px 46px 19px;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 155px 58px 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 370px 66px 370px;
+  }
+}
+
+.video__title {
   font-weight: bold;
-  font-size: 18px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
+}
+
+.video__subtitle {
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .video__subtitle {
