@@ -24,6 +24,7 @@
   margin: 40px 20px 40px 20px;
   width: 280px;
   height: 280px;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     width: 100%;
@@ -37,35 +38,37 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
   @media (min-width: @desktop-width) {
     position: absolute;
-    bottom: 0;
     width: 100%;
-    color: #fff;
+    top: 200px;
+    bottom: 0;
+    color: #ffffff;
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
 .post__wrapper--author {
   padding: 10px 0 10px 20px;
-  @media (max-width: @desktop-width) {
-  }
 }
 
 .post__wrapper--likes {
   display: flex;
   flex-direction: row;
   padding: 0 0 0 20px;
+
   @media (min-width: @tablet-width) {
-    padding: 18px 10px 0px 10px;
+    padding: 18px 10px 0 10px;
   }
 }
 
 .post__icon {
   fill: black;
   opacity: 0.3;
+
   @media (min-width: @desktop-width) {
-    fill: #fff;
+    fill: #ffffff;
     opacity: 1;
   }
 }

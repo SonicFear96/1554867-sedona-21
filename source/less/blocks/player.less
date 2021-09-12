@@ -1,9 +1,11 @@
 .player {
   margin: 0 auto;
   width: 320px;
+
   @media (min-width: @tablet-width) {
     width: 648px;
   }
+
   @media (min-width: @desktop-width) {
     width: 800px;
   }
@@ -21,10 +23,12 @@
     min-height: 499px;
     background-size: 648px 499px;
     background-image: url("../../img/video-mobile.png");
+
     @media (min-width: @desktop-width) {
       background-image: url("../../img/video-mobile.png");
     }
   }
+
   @media (min-width: @desktop-width) {
     min-height: 500px;
     background-size: 800px 500px;
@@ -38,8 +42,8 @@
   min-height: 66px;
   margin: 0 20px;
   position: relative;
-
   background-color: #f2f2f2;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-top: -93px;
@@ -56,14 +60,17 @@
   min-height: 66px;
   line-height: 0;
   width: 70px;
+
   @media (min-width: @tablet-width) {
     width: 90px;
     min-height: 93px;
   }
+
   &:nth-last-child(2) {
     width: 40px;
     margin-left: auto;
   }
+
   &__button:hover &__icon {
     fill: #333333;
   }
@@ -75,11 +82,14 @@
 
 .player__icon {
   fill: #5c6870;
+
   @media (min-width: @tablet-width) {
     fill: #ffffff;
   }
+
   &:hover {
     fill: #5c6870;
+
     @media (max-width: @mobile-width-only) {
       fill: black;
     }
@@ -111,11 +121,13 @@
     left: 22px;
     right: 22px;
     background-color: rgba(255, 255, 255, 0.3);
+
     @media (min-width: @tablet-width) {
       left: 0;
       right: 35px;
     }
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -125,6 +137,6 @@
     transform: translate(0, -50%);
     left: 50px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 }
