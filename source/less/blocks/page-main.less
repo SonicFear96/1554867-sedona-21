@@ -32,21 +32,26 @@
   background-image: url("../img/triangle-desktop.svg"),
     url("../img/back-desktop.png");
   background-repeat: no-repeat;
-  background-position: 50% bottom;
+  background-position: 50% bottom, 66%;
 
   @media (min-width: @tablet-width) {
     height: 520px;
   }
 
-  @media (max-width: 320px) {
-    background-image: url("../img/back-desktop-mobile.png");
-  }
+  // @media (max-width: 320px) {
+  //   background-image: url("../img/back-desktop-mobile.png");
+  // }
 }
 
 .page-main__svg {
   display: block;
   margin: 0 auto;
   padding: 77px 0 93px 0;
+
+  @media (max-width: @mobile-width-only) {
+    width: 282px;
+    height: 384px;
+  }
 }
 
 /*PAGE FORM*/

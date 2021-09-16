@@ -39,7 +39,22 @@
     <main class="page-main">
       <h1 class="visually-hidden">Форма обратной связи Седоны</h1>
       <section class="page-main__title title">
-        <img class="title__img" src="img/text-sedona-desktop.svg" width="460" height="80" alt="Надпись Седона">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="img/sedona_logo.svg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="img/sedona_logo.svg"
+          />
+          <img
+            class="title__img"
+            src="img/sedona_logo_mobile.svg"
+            alt="Welcome to the gorgeous Sedons"
+          />
+        </picture>
+        <!-- <img class="title__img" src="img/text-sedona-desktop.svg" width="460" height="80" alt="Надпись Седона"> -->
       </section>
       <section class="page-main__feedback">
         <div class="feedback">

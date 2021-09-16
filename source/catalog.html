@@ -39,7 +39,21 @@
     <main class="page-main">
       <h1 class="visually-hidden">Фотографии и видео из городка Седона</h1>
       <section class="page-main__title title">
-        <img class="title__img" src="img/text-sedona-desktop.svg" width="460" height="80" alt="Надпись Седона">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="img/sedona_logo.svg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="img/sedona_logo.svg"
+          />
+          <img
+            class="title__img"
+            src="img/sedona_logo_mobile.svg"
+            alt="Welcome to the gorgeous Sedons"
+          />
+        </picture>
       </section>
       <section class="page-main__picture">
         <div class="picture">
@@ -57,12 +71,25 @@
           <h2 class="visually-hidden">Фотографии Седоны</h2>
           <ul class="photo__list">
             <li class="photo__item post photo__item--main">
-              <img class="post__photo"
-                src="img/photo-1-mobile.jpg"
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="img/photo-1_desktop.jpg 1x, img/photo-1_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-1_tablet.jpg 1x,
+                    img/photo-1_tablet@2x.jpg 2x
+                  "
+                />
+                <img class="post__photo"
+                src="img/photo-1_mobile.jpg"
                 width="280"
                 height="280"
                 alt="фотография заката"
               />
+              </picture>
               <div class="post__wrapper--title">
                 <div class="post__wrapper--author">
                   <h3 class="post__title">Неродные просторы</h3>
@@ -77,13 +104,26 @@
               </div>
             </li>
             <li class="photo__item post">
-              <img
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="img/photo-2_desktop.jpg 1x, img/photo-2_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-2_tablet.jpg 1x,
+                    img/photo-2_tablet@2x.jpg 2x
+                  "
+                />
+                <img
                 class="post__photo"
-                src="img/photo-2-mobile.jpg"
+                src="img/photo-2_mobile.jpg"
                 width="280"
                 height="280"
                 alt="фотография растений"
               />
+              </picture>
               <div class="post__wrapper--title">
                 <div class="post__wrapper--author">
                   <h3 class="post__title">Местная растительность</h3>
@@ -98,13 +138,33 @@
               </div>
             </li>
             <li class="photo__item post">
-              <img
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="img/photo-3_desktop.jpg 1x, img/photo-3_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-3_tablet.jpg 1x,
+                    img/photo-3_tablet@2x.jpg 2x
+                  "
+                />
+                <img
+                class="post__photo"
+                src="img/photo-3_mobile.jpg"
+                width="280"
+                height="280"
+                alt="фотография леса"
+              />
+              </picture>
+              <!-- <img
                 class="post__photo"
                 src="img/photo-3-mobile.jpg"
                 width="280"
                 height="280"
                 alt="фотография леса"
-              />
+              /> -->
               <div class="post__wrapper--title">
                 <div class="post__wrapper--author">
                   <h3 class="post__title">Дорога на Север</h3>
@@ -119,14 +179,26 @@
               </div>
             </li>
             <li class="photo__item post">
-              <img
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="img/photo-4_desktop.jpg 1x, img/photo-4_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-4_tablet.jpg 1x,
+                    img/photo-4_tablet@2x.jpg 2x
+                  "
+                />
+                <img
                 class="post__photo"
-                src="img/photo-4-mobile.jpg"
+                src="img/photo-4_mobile.jpg"
                 width="280"
                 height="280"
                 alt="фотография скалы"
               />
-
+              </picture>
               <div class="post__wrapper--title">
                 <div class="post__wrapper--author">
                   <h3 class="post__title">Мост Дьявола</h3>
